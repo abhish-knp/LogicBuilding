@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicBuildForChallenge1
 {
@@ -11,29 +7,44 @@ namespace LogicBuildForChallenge1
         static void Main(string[] args)
         {
             Console.WriteLine("Test Message");
+            int[] listOfNumbers = { 1, 1, 1, 1 };
+            Challenge6 chl6 = new Challenge6();
+            var result = chl6.FindEvenIndex(listOfNumbers);
+
+            Console.WriteLine(result);
+
+            //Challenge 5
+            {
+
+                Challenge5 chl5 = new Challenge5();
+                //var result = chl5.GetSum(1, -2);
+                //Console.WriteLine(result);
+
+            }
+
             // Challenge 3
-
-            Challenge3 chl3 = new Challenge3();
-            int [] x = { 1, 2, 3 , 4};
-            var result = chl3.sumTwoSmallestNumbers(x); 
-            Console.WriteLine(result);    
-
+            {
+                Challenge3 chl3 = new Challenge3();
+                int[] x = { 1, 2, 3, 4 };
+                //var result = chl3.sumTwoSmallestNumbers(x);
+                //Console.WriteLine(result);
+            }
 
             // Challenge 2 
             {
                 Challenge1 chl1 = new Challenge1();
                 //var result = chl1.rowSumOddNumbers(4);
-                Console.WriteLine(result);
+                //Console.WriteLine(result);
             }
-             
+
             //Challenge 1
             {
                 Challenge2 chl2 = new Challenge2();
                 string[] w = { "n", "s" };
                 //var result = chl2.IsValidWalk(w);
-                Console.WriteLine(result);
+                //Console.WriteLine(result);
             }
-           
+
         }
     }
     public class Challenge1
@@ -113,6 +124,9 @@ namespace LogicBuildForChallenge1
             //Code here...
             var l = numbers.Length;
             var list = numbers;
+            Array.Sort(numbers);
+
+
             // sort the array 
             // do sum of least two index, last two elements
 
@@ -130,13 +144,60 @@ namespace LogicBuildForChallenge1
          * 4 --> 0 (because 4 is already a one-digit number)
         */
 
+
         public int Persistence(long n)
         {
             // your code
+
+
             return 10;
             // To convert into string and split and convert to int
             // for (i, length, i++) ; prod = prod*i;
             // while length will be 1
         }
+    }
+
+    public class Challenge5
+    {
+
+        /*Given two integers a and b, which can be positive or negative, find the sum of all the integers between and 
+         * including them and return it. If the two numbers are equal return a or b.Note: a and b are not ordered!
+         */
+        public int GetSum(int a, int b)
+        {
+            //Good Luck!
+            int sum = 0;
+            if (a > b)
+            {
+                int c = a;
+                a = b;
+                b = c;
+                for (int i = a; i <= b; i++)
+                {
+                    sum = sum + i;
+                }
+                return sum;
+            }
+
+            for (int i = a; i <= b; i++)
+            {
+                sum = sum + i;
+            }
+            return sum;
+        }
+    }
+
+    public class Challenge6
+    {
+        public int FindEvenIndex(int[] arr)
+        {
+
+            // using for loop, slice by index [:i] and [i+1:]
+            // will compare left part and Right part 
+
+            return -1;
+            //Code goes here!
+        }
+
     }
 }
