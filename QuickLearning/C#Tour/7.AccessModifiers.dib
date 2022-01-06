@@ -1,0 +1,34 @@
+#!csharp
+
+// Access Modifiers: Public, Private, Protected, static (Controll class and members).
+
+// OOP -Encapsulaton/Informatin hiding, -Inheritance, -Polymorphism.
+
+#!csharp
+
+// Encapsulation:
+// - Define fiels as private.
+// - To use getter and setter method for accessing the field.
+
+#!csharp
+
+public class Person
+{
+    private DateTime _birthdate;                        //private property
+
+    public void SetBirthdate(DateTime birthdate)        //set method 
+    {
+        _birthdate = birthdate;
+    }
+
+    public DateTime GetBirthdate()
+    {
+        return _birthdate;
+    }
+}
+
+#!csharp
+
+var Person1 = new Person();
+Person1.SetBirthdate(new DateTime(1995,1,1));
+Console.WriteLine(Person1.GetBirthdate());

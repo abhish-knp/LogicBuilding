@@ -1,0 +1,54 @@
+#!csharp
+
+// Constructor: A method that is called when an instance of a class is created, To put an object in an early state. 
+
+// ? to understand : this method for making order of constructor.
+
+using System;
+using System.Collections;
+
+#!csharp
+
+public class Customer
+{
+    public int Id;
+    public string Name;
+    //public List<Order> Orders;
+
+    public Customer()
+    {
+     //   Orders = new List<Order>();
+    }
+
+    public Customer(string name)
+    {
+        this.Name = name;                   //Name is member of the class.
+    }
+    
+    // custructor overriding
+    public Customer(int id)
+    {
+        this.Id = id;
+    }
+
+    public Customer(int id, string name)
+    {
+        this.Id = id;
+        this.Name = name;
+    }
+    //ctor is code snippet to make quick constructor.
+}
+
+
+var customer1 = new Customer("John");        //Calling Constructor. 
+var customer2 = new Customer(2, "Metthew");
+
+Console.WriteLine(customer1.Name);
+
+// For comment Ctrl + k and Ctrl + C.
+Console.WriteLine(customer2.Name);
+Console.WriteLine(customer2.Id);
+
+#!csharp
+
+// Constructor overloading

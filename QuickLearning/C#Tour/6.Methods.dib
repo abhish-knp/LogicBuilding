@@ -1,0 +1,61 @@
+#!csharp
+
+//Methods:
+//Signature Methods, Method Overlaoding, Param Modifier, Ref modifier, Out modifier
+
+// Overlaoding Methods
+
+
+// Ref Modifier
+
+public class Point
+{
+    public int X;
+    public int Y;
+
+    public Point(int x, int y)
+    {
+        this.X = x;
+        this.Y = y;
+    }
+
+    public void Move(int x, int y)
+    {
+        this.X = x;
+        this.Y = y;
+    }
+
+    public void Move(Point newLocation)
+    {
+        Move(newLocation.X, newLocation.Y);
+    }
+}
+
+#!csharp
+
+var point = new Point(10, 20);
+point.Move(new Point(40,60));
+Console.WriteLine("Point is at:{0} and {1}", point.X, point.Y);
+
+#!csharp
+
+using System.Linq;
+
+public class Calculator
+{
+    public int Add(params int[] numbers)
+    {
+        var sum = 0;
+        foreach (var number in numbers)
+        {
+            sum = sum + number;
+        }
+        return sum; 
+    }
+}
+
+#!csharp
+
+var calculate = new Calculator();
+Console.WriteLine(calculate.Add(1,2,3));
+Console.WriteLine(calculate.Add(new int[]{10,20,30}));

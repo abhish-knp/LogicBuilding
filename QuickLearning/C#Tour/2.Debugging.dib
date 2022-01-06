@@ -1,0 +1,73 @@
+#!csharp
+
+//Deebugging
+
+// F9 to put Breakpoint on code.
+// F5 Run in debug mode.
+// Ctrl + F5 Run without debug.
+// F10 to run a single line at a time. Or step over.
+// F11 step into.
+using System;
+using System.Collections;
+
+#!csharp
+
+// What is a class
+// Real-world example of classes
+// What is an object
+// Static members
+
+
+// Anatomy of a Class: Data(represented by fields), Behaviour(represented by method / functions), UML
+
+// Oject: instance of class, 
+
+public class Person
+{
+    public string Name;
+    public void Introduce()
+    {
+        Console.WriteLine("Hi, my Name is: ", Name);
+    }
+}   
+
+// Creating Objects
+
+Person person = new Person();           // one way
+//var person = new Person();            // another way
+
+
+// Using Objects
+
+person.Name = "Abhish";                 // Instance method (accessible from a object)
+person.Introduce(); 
+
+// Class Members: Instance: accessible from an object, 
+// Static: accessible from the class not the object. 
+Console.WriteLine();                    // accessible from the class.
+
+
+// Why use static members? -> To represent that are singleton, DateTimeNow, Console.WriteLine()
+
+#!csharp
+
+public class NewPerson
+{
+    public string Name;
+    public void Introduce(string to)
+    {
+        Console.WriteLine("Hi {1}, I am {0}", to, Name);
+    }
+
+    public static NewPerson Parse(string str)
+    {
+        var person = new NewPerson();
+        person.Name = str;
+        
+        return person;
+    }
+}
+
+//var person = new NewPerson();             // Instance method 
+NewPerson.Parse("Abhish");
+person.Introduce("not done.");

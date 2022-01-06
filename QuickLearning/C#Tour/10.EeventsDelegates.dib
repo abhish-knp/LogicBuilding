@@ -1,0 +1,42 @@
+#!csharp
+
+// Events and Delegates
+// mechanism for communication between objects
+// used in building 
+//
+
+#!csharp
+
+using System;
+using System.Threading;
+
+#!csharp
+
+public class VideoEncoder
+{
+    public void Encode(Video video)
+    {
+        Console.WriteLine("Encoding video...");
+        Thread.Sleep(3000);
+    }
+}
+
+#!csharp
+
+var video = new Video() {Title = " Video 1"};
+var VideoEncoder = new VideoEncoder();
+
+VideoEncoder.Encode(video);
+
+#!csharp
+
+//Event Handler : it is nothing to do with base class. 
+public void OnVideoEncoded(object source, EventArge e)
+{
+    
+}
+
+#!csharp
+
+//Delegates: Agreement/ Contract between Publisher and Subscriber
+//Determines the signature of the event handler method in Subscriber.

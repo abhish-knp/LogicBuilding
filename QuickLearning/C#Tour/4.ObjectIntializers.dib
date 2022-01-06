@@ -1,0 +1,35 @@
+#!csharp
+
+// Object Intializers: a syntax for quickly intialising an object without the need to call one of its constructors. 
+
+
+
+using System;
+using System.Collections;
+
+#!csharp
+
+public class Person
+{
+    public int id;
+    public string FirstName;
+    public string LastName;
+    public DateTime Birthdate;
+    
+     public Person(int id) {}
+
+     public Person(int id, string firstName) {}
+
+     public Person(int id, string firstName, string lastName) {}
+
+     public Person(int id, DateTime birthdate) {}
+}
+
+#!csharp
+
+// Object Intialization methods
+
+// var person = new Person{
+//     FirstName = "Abhish",
+//     LastName = "Kumar"
+// };

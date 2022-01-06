@@ -1,0 +1,128 @@
+#!csharp
+
+using System;
+using System.Collections.Generic;s
+
+#!csharp
+
+// Hello World 
+Console.WriteLine("Hello World")
+
+#!csharp
+
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+#!csharp
+
+//Identifiers: can't have space in between. use Pascal Case, for local use camel, and for Constant use Pascal case.
+//Non-Primitive Types: String, Array, Enum, Class.
+
+#!csharp
+
+//Overflowing
+checked
+{
+    var number = 255;
+    number = number + 1;
+}
+
+// It'll check first, if it fails it'll throw exception error.
+
+#!csharp
+
+//Scope
+byte number = 2;
+int count = 10;
+float totalPrice = 20.95F;
+char character = 'A';
+string firstName = "Abhish";
+bool isWorking = false;
+
+Console.WriteLine(number);
+Console.WriteLine(count);
+Console.WriteLine(totalPrice);
+Console.WriteLine(character);
+Console.WriteLine(firstName);
+
+
+//Ctrl + Shift + B: Compile the code.
+//Or to use var instead of using datatype in each of particular of them.
+//Ctrl + Click: Object Browser Window.
+
+#!csharp
+
+//Format string
+Console.WriteLine("byte minimum value: {0} and \nmaximum value: {1}", byte.MinValue, byte.MaxValue);
+Console.WriteLine("float minimum value: {0} and \nmaximum value: {1}", float.MinValue, float.MaxValue);
+Console.WriteLine("int minimum value: {0} and \nmaximum value: {1}", int.MinValue, int.MaxValue);
+
+#!csharp
+
+//Implicit type conversion
+//Explicit type conversion: data loss can be possible
+//Conversion between non-compatible types
+
+//Implicit 
+byte b = 1;
+//int i = b;
+
+//Non-compatible types
+string s = "1";
+int i = Convert.ToInt32(s);     //by convert type
+int j = int.Parse(s);           //by Parse method
+
+Console.WriteLine(i);
+Console.WriteLine(j);
+
+//Convert : ToByte(), ToInt16()
+
+#!csharp
+
+// Data loss example
+int i = 1000;
+byte b = (byte) i;          //Explicitly cast to byte.
+Console.WriteLine(b);
+
+#!csharp
+
+// overflow error.
+
+var number = "1234";
+byte b = Convert.ToByte(number);
+Console.WriteLine(b);
+
+// Now it shows error, a Overflow Exception.
+
+#!csharp
+
+// Try Catch Method
+try
+{
+    var number = "1234";
+    byte b = Convert.ToByte(number);
+    Console.WriteLine(b);
+}
+catch(Exception)
+{
+    Console.WriteLine("The number could not be converted");
+}
+
+#!csharp
+
+// C# Operators
+// Arithmatic <+,-,*,/>, Comparison <++, --, >, <, <= >, Assignment <=, +=, > , Logical <&&, ||, !> and Bitwise <&, |>.
+
+var a = 10;
+var b = 3;
+
+Console.WriteLine(!(a != b));       //appling two negatives == one positive
+
+#!csharp
+
+/*
+for multi line comments
+more than one line.
+write minimum comments, like why and How. 
+*/
