@@ -1,5 +1,6 @@
 bin/
 obj/
+.vs/
 
 KataSolutionConsole/bin
 KataSolutionTests/bin
